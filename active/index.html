@@ -5,10 +5,11 @@
   <title>LupineVault - Free Web Browser - School Safe & 100% Teacher Approved!</title>
   <link rel="icon" type="image/x-icon" href="logo.png">
   <link rel="shortcut icon" type="image/jpg" href="logo.png"/>
+  
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-
+  
   <style>
     /* Global body styles */
     body {
@@ -100,6 +101,24 @@
       border: 2px solid #ff9fff;
     }
 
+    /* Popular Sites */
+    #popularSites {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    #popularSites img {
+      margin: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    #popularSites img:hover {
+      transform: scale(1.1);
+    }
+
     /* Social Links */
     .social-links a {
       font-size: 32px;
@@ -147,11 +166,6 @@
       z-index: -1;
     }
 
-    /* Remove the popular sites images */
-    #popularSites {
-      display: none;
-    }
-
     /* Responsive Design */
     @media screen and (max-width: 768px) {
       #bigTitle {
@@ -163,6 +177,7 @@
       }
     }
   </style>
+
 </head>
 <body>
 
@@ -180,6 +195,17 @@
       <input id="uv-address" type="text" placeholder="Search Google or type an URL" class="form__input"/>
     </form>
 
+    <div id="popularSites">
+      <img src="https://img.icons8.com/?size=100&id=T2CwYFr5ouk6&format=png&color=000000" alt="Xbox" onclick="autofill('http://xbox.com/play')">
+      <img src="https://img.icons8.com/?size=100&id=48137&format=png&color=000000" alt="Now.gg" onclick="autofill('https://now.gg/')">
+      <img src="https://img.icons8.com/?size=100&id=48166&format=png&color=000000" alt="Google" onclick="autofill('https://google.com')">
+      <img src="https://img.icons8.com/?size=100&id=92582&format=png&color=000000" alt="GeForce NOW" onclick="autofill('https://play.geforcenow.com/')">
+      <img src="https://img.icons8.com/?size=100&id=KeTtCQ_b-ZiV&format=png&color=000000" alt="TikTok" onclick="autofill('https://tiktok.com')">
+      <img src="https://img.icons8.com/?size=100&id=52539&format=png&color=000000" alt="GitHub" onclick="autofill('https://github.com')">
+      <img src="https://img.icons8.com/?size=100&id=53013&format=png&color=000000" alt="Twitch" onclick="autofill('https://twitch.tv')">
+      <img src="https://img.icons8.com/?size=100&id=kTuxVYRKeKEY&format=png&color=000000" alt="ChatGPT" onclick="autofill('https://chatgpt.com')">
+    </div>
+
     <div class="social-links">
       <a href="https://discord.gg/Dybpe2uWfZ" target="_blank" class="fa-brands fa-discord"></a>
       <a href="https://github.com/tf7software/UV-Static" target="_blank" class="fa-brands fa-github"></a>
@@ -190,7 +216,6 @@
       <p id="uv-error"></p>
       <pre id="uv-error-code"></pre>
     </div>
-
   </div>
 
   <div id="footer">
